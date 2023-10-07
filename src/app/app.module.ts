@@ -24,12 +24,12 @@ import { EditListingPageComponent } from './components/edit-listing-page/edit-li
 const appRoutes: Routes = [
   { path: '', component: TasksComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'listings', component: ListingsPageComponent, pathMatch: 'full' },
-  { path: 'listings/:id', component: ListingDetailPageComponent },
-  { path: 'listings/status/:id', component: StatusPageComponent },
-  { path: 'my-listings', component: MyListingsPageComponent },
-  { path: 'new-listing/:id', component: NewListingPageComponent },
-  { path: 'edit-listing', component: EditListingPageComponent },
+  //{ path: 'listings', component: ListingsPageComponent, pathMatch: 'full' },
+  //{ path: 'listings/:id', component: ListingDetailPageComponent },
+  //{ path: 'listings/status/:id', component: StatusPageComponent },
+  //{ path: 'my-listings', component: MyListingsPageComponent },
+  //{ path: 'new-listing/:id', component: NewListingPageComponent },
+  //{ path: 'edit-listing', component: EditListingPageComponent },
 ];
 
 @NgModule({
