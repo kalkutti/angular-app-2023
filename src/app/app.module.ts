@@ -14,13 +14,13 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ListingsPageComponent } from './components/listings-page/listings-page.component';
+/*import { ListingsPageComponent } from './components/listings-page/listings-page.component';
 import { ListingDetailPageComponent } from './components/listing-detail-page/listing-detail-page.component';
 import { StatusPageComponent } from './components/status-page/status-page.component';
 import { MyListingsPageComponent } from './components/my-listings-page/my-listings-page.component';
 import { NewListingPageComponent } from './components/new-listing-page/new-listing-page.component';
 import { EditListingPageComponent } from './components/edit-listing-page/edit-listing-page.component';
-
+*/
 const appRoutes: Routes = [
   { path: '', component: TasksComponent },
   { path: 'about', component: AboutComponent },
@@ -42,12 +42,14 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
+    /*
     ListingsPageComponent,
     ListingDetailPageComponent,
     StatusPageComponent,
     MyListingsPageComponent,
     NewListingPageComponent,
     EditListingPageComponent,
+    */
   ],
   imports: [
     BrowserModule,
