@@ -10,11 +10,11 @@ import { Task } from '../../Task';
 })
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
-  text: string = '';
-  day: string = '';
-  time: string = '';
+  text: string;
+  day: string;
+  time: string;
   reminder: boolean = false;
-  showAddTask: boolean = false;
+  showAddTask: boolean;
   subscription: Subscription;
 
   constructor(private uiService: UiService) {
