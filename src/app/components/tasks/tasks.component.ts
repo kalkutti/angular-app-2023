@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../Task';
-import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-tasks',
@@ -10,15 +9,11 @@ import { formatDate } from '@angular/common';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
-  date = new Date();
-  day = 'September 21th';
 
-  constructor(private taskService: TaskService) { 
-    this.day = formatDate(this.date, 'MMMM d', 'en-US', '-0400');
-  }
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks.filter((t) => t.day == this.day)));
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
 
   deleteTask(task: Task) {
@@ -35,13 +30,6 @@ export class TasksComponent implements OnInit {
   }
 
   addTask(task: Task) {
-    this.taskService
-      .addTask(task)
-      .subscribe(
-        (task) => { 
-          if (task.day == this.day) 
-            this.tasks.push(task);
-        }
-      );
+    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
   }
 }
