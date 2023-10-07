@@ -14,8 +14,7 @@ export class NewListingPageComponent {
   day: string = '';
   time: string = '';
   reminder: boolean = false;
-  showAddTask: boolean = false;
-  subscription: Subscription;
+  status: boolean = false;
 
   constructor(
     private router: Router,

@@ -10,7 +10,7 @@ import { Task } from '../../Task';
   styleUrls: ['./status-page.component.css']
 })
 export class StatusPageComponent {
-  task: Task;
+  task!: Task;
   
   constructor(
     private route: ActivatedRoute,
