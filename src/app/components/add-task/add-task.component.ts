@@ -14,7 +14,7 @@ export class AddTaskComponent implements OnInit {
   day: string = '';
   time: string = '';
   reminder: boolean = false;
-  showAddTask: boolean;
+  showAddTask: boolean = false;
   subscription: Subscription;
 
   constructor(private uiService: UiService) {
