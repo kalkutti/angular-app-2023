@@ -13,14 +13,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'http://192.168.0.22/tasks';
+  private apiUrl = 'http://localhost:5000/tasks';
 
   constructor(private http: HttpClient) {}
-
-  getSingleTask(id: any): Observable<Task> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<Task>(url);
-  }
 
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(this.apiUrl);

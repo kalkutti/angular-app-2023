@@ -10,11 +10,10 @@ import { Task } from '../../Task';
 })
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
-  text: string = '';
-  day: string = '';
-  time: string = '';
+  text: string;
+  day: string;
   reminder: boolean = false;
-  showAddTask: boolean = false;
+  showAddTask: boolean;
   subscription: Subscription;
 
   constructor(private uiService: UiService) {
@@ -39,9 +38,7 @@ export class AddTaskComponent implements OnInit {
     const newTask: Task = {
       text: this.text,
       day: this.day,
-      time: this.time,
       reminder: this.reminder,
-      status: false,
     };
 
     this.onAddTask.emit(newTask);
