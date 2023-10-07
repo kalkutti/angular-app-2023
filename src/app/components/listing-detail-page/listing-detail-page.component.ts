@@ -10,7 +10,7 @@ import { Task } from '../../Task';
   styleUrls: ['./listing-detail-page.component.css']
 })
 export class ListingDetailPageComponent {
-  task: Task = null;
+  task: Task | undefined;
 
   constructor(
     private route: ActivatedRoute,
