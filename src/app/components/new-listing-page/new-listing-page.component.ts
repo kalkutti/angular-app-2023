@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 })
 export class NewListingPageComponent {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
-  text: string;
-  day: string;
-  time: string;
+  text: string = '';
+  day: string = '';
+  time: string = '';
   reminder: boolean = false;
-  showAddTask: boolean;
+  showAddTask: boolean = false;
   subscription: Subscription;
 
   constructor(
